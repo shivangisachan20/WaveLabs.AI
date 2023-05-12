@@ -2,7 +2,9 @@ Approach
 Two vectors named low(represent the lowest time of insertion it can access except its parent) and tin(represent the time of insertion of current node).
 We do DFS traversel on the graph. If adjacent node is not visited then call DFS traversal.
 The DFS traversal will mark if as visited and set value of tin and low.
-When the DFS call for the adjacent node is completed then node will check for the min val of low[node] and low[adjacent node] and then it will check if adjacent node can be visited after removing the edges(this can be checked by the condition if(tin[node] > low[adjacent node]) , if this condition is true then it means that the adjacent node cannot be visited after removal of the edges). Therefore this edge will be a part of answer.
+When the DFS call for the adjacent node is completed then node will check for the min val of low[node] and low[adjacent node] and then it will check 
+if adjacent node can be visited after removing the edges(this can be checked by the condition if(tin[node] > low[adjacent node]) , 
+if this condition is true then it means that the adjacent node cannot be visited after removal of the edges). Therefore this edge will be a part of answer.
 
 
 // Code
